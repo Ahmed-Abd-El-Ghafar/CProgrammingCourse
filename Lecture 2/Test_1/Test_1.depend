@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1594497576 source:d:\es\introductiontoes\final\cprogrammingrepository\cprogrammingcourse\lecture 2\test_1\main.c
+	"main.h"
+
+1594492580 source:d:\es\introductiontoes\final\cprogrammingrepository\cprogrammingcourse\lecture 2\test_1\lcd.c
+
+1594494033 source:d:\es\introductiontoes\final\cprogrammingrepository\cprogrammingcourse\lecture 2\test_1\robot_movement.c
+	"lcd.h"
+	"robot_movement.h"
+
+1594494034 d:\es\introductiontoes\final\cprogrammingrepository\cprogrammingcourse\lecture 2\test_1\robot_movement.h
+
+1594495139 d:\es\introductiontoes\final\cprogrammingrepository\cprogrammingcourse\lecture 2\test_1\lcd.h
+
+1594496345 d:\es\introductiontoes\final\cprogrammingrepository\cprogrammingcourse\lecture 2\test_1\main.h
+	<stdio.h>
+	"robot_movement.h"
+	"lcd.h"
+
