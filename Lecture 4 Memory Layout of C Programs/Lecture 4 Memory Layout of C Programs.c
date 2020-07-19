@@ -36,6 +36,7 @@ unsigned int var_2 = 55;	/* Initialized Data Segment */
 unsigned int var_3;     
 
 void robot_move_left(void);
+void print_number(int number);
 /* End Global declaration section */
 
 /* Start Main Program Section */
@@ -43,6 +44,7 @@ int main()
 {
     unsigned int var_11;	/* Allocated in the "Stack" frame of main() function */
     unsigned int var_22 = 30;	/* Allocated in the "Stack" frame of main() function */
+	
 	robot_move_left();
     return 0;
 }
@@ -58,6 +60,16 @@ int main()
 void robot_move_left(void){
     int l_value = 66;	/* Allocated in the "Stack" frame of robot_move_left() function */
     printf("Robot move left\n");
+}
+
+/**
+  * @brief  This function will print the input number.
+  * @param  number number to be print
+  * @retval None
+  */
+void print_number(int number){ /* Allocated in the "Stack" frame of print_number() function */
+    int l_value = 66;	/* Allocated in the "Stack" frame of print_number() function */
+    printf("number = %i\n", number);
 }
 /* Start User Define Functions Section */
 
