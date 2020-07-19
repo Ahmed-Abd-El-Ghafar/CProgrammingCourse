@@ -44,9 +44,8 @@ int main()
 {
     unsigned int var_11;	/* Allocated in the "Stack" frame of main() function */
     unsigned int var_22 = 30;	/* Allocated in the "Stack" frame of main() function */
-	
-	robot_move_left();
-	print_number();
+    robot_move_left();
+    print_number();
     return 0;
 }
 /* End Main Program Section */
