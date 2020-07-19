@@ -29,11 +29,13 @@ Description	: This is the main application
 /* Copy the data segment initializers from flash to SRAM -> Check startup_stm32f407xx.s -> Lines (84:97) */
 unsigned int var_1 = 0;		/* Initialized Data Segment */
 unsigned int var_2 = 55;	/* Initialized Data Segment */ 
+static unsigned int var_3 = 66; /* Initialized Data Segment */
 /*-------------------------------------------------*/
 /* UnInitialized  Data Segment (BSS Segment) -> Equal to Zero (Filled by the Startup Code) */
 /* Uninitialized data section -> Refer to (STM32F407VG_FLASH.ld) -> Lines (148:162) */
 /* Zero fill the bss segment -> Check startup_stm32f407xx.s -> Lines (99:106) */
-unsigned int var_3;     
+unsigned int var_;	/* UnInitialized  Data Segment */
+static unsigned int var_3;	/* UnInitialized  Data Segment */
 
 void robot_move_left(void);
 void print_number(int number);
