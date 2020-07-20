@@ -47,9 +47,9 @@ int main()
 {
     unsigned int var_11;	/* Allocated in the "Stack" frame of main() function */
     unsigned int var_22 = 30;	/* Allocated in the "Stack" frame of main() function */
-	buffer1  = (char*)malloc(sizeof(char)*20);
-	char *buffer2 = NULL;
-	buffer2 = (char*)malloc(sizeof(char)*20);
+    buffer1  = (char*)malloc(sizeof(char)*20);
+    char *buffer2 = NULL;
+    buffer2 = (char*)malloc(sizeof(char)*20);
     robot_move_left();
     print_number();
     return 0;
