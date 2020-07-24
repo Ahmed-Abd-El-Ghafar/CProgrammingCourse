@@ -38,6 +38,8 @@ unsigned int var_;	/* UnInitialized  Data Segment */
 static unsigned int var_3;	/* UnInitialized  Data Segment */
 char *buffer1 = NULL; /* Initialized Data Segment */
 
+const unsigned int var_rodata = 454545; /* rodata -> Flash */
+
 void robot_move_left(void);
 void print_number(int number);
 /* End Global declaration section */
@@ -45,12 +47,18 @@ void print_number(int number);
 /* Start Main Program Section */
 int main()
 {
+	/* Any Local Variable "auto" by default */
+	auto unsigned int auto_value1 = 44; /* Allocated in the "Stack" frame of main() function */
+	unsigned int auto_value2; /* Allocated in the "Stack" frame of main() function */
+	
     unsigned int var_11;	/* Allocated in the "Stack" frame of main() function */
     unsigned int var_22 = 30;	/* Allocated in the "Stack" frame of main() function */
-    buffer1  = (char*)malloc(sizeof(char)*20);
-    char *buffer2 = NULL;
-    buffer2 = (char*)malloc(sizeof(char)*20);
-    robot_move_left();
+    
+	buffer1  = (char*)malloc(sizeof(char)*20); /* Allocate 20 bytes at Heap Memory */
+    char *buffer2 = NULL;	/* Allocated in the "Stack" frame of main() function */
+    buffer2 = (char*)malloc(sizeof(char)*20); /* Allocate 20 bytes at Heap Memory */
+    
+	robot_move_left();
     print_number();
     return 0;
 }
@@ -65,7 +73,9 @@ int main()
   */
 void robot_move_left(void){
     int l_value = 66;	/* Allocated in the "Stack" frame of robot_move_left() function */
-    printf("Robot move left\n");
+	static unsigned short l_val1 = 30; /* Initialized Data Segment --> Accessed only by robot_move_left() function */
+    static unsigned char l_val2; /* UnInitialized Data Segment --> Accessed only by robot_move_left() function */
+	printf("Robot move left\n");
 }
 
 /**
@@ -75,6 +85,8 @@ void robot_move_left(void){
   */
 void print_number(int number){ /* Allocated in the "Stack" frame of print_number() function */
     int l_value = 66;	/* Allocated in the "Stack" frame of print_number() function */
+	static unsigned short l_val1 = 30; /* Initialized Data Segment --> Accessed only by print_number() function */
+    static unsigned char l_val2; /* UnInitialized Data Segment --> Accessed only by print_number() function */
     printf("number = %i\n", number);
 }
 /* Start User Define Functions Section */
